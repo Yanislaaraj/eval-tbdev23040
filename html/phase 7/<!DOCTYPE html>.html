@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="%3C!DOCTYPE%20html%3E_fichiers/style.css">
+  <title>Jarditou</title>
+</header>
+
+
+  <img src="%3C!DOCTYPE%20html%3E_fichiers/jarditou_logo.jpg" width="150" height="50">
+  <h1>Tout le jardin </h1>
+  <br>
+  <p1>La qualité depuis 70 ans</p1>
+  <br>
+  <ol type="disc">
+    <a href="http://127.0.0.1:5500/Jarditou/Index.html">
+      <li>Acceuil</li>
+    </a>
+    <a href="http://127.0.0.1:5500/Jarditou/Tableau.html">
+      <li>Tableau</li>
+    </a>
+    <a href="http://127.0.0.1:5500/Jarditou/Contact.html">
+      <li>Contact</li>
+    </a>
+  </ol>
+  <img src="%3C!DOCTYPE%20html%3E_fichiers/promotion.jpg" width="700" height="200">
+  <br>
+  <h1>Acceuil</h1>
+  <br>
+  <h2>L'entreprise</h2>
+  <br>
+  <p2>Notre entreprise familiale met tout son savoir-faire à votre disposition dans le domaine du jardin et du
+    paysagisme.</p2>
+  <br>
+  <br>
+  <p3>Crée il y a 70 ans, notre entreprise vend fleurs, arbustes, matériel à main motorisés. </p3>
+  <br>
+  <br>
+  <p4>Implantés à Amiens, nus intervenons dans tout le département de la Somme : Albert, Doullens, Péronne, Abbeville,
+    Corbie</p4>
+  <br>
+  <br>
+  <h3>Qualité</h3>
+  <br>
+  <p5>Nous mettons à votre disposition un service personnalisé, avec 1 seul interlocuteur durant tout votre projet.</p5>
+  <br>
+  <br>
+  <p6>Vous serez séduit par notre expertise, nos compétences et notre sérieux.</p6>
+  <br>
+  <br>
+  <h4>Devis gratuit</h4>
+  <p7>Vous pouvez bien sûr contacter pour plus amples informations ou pour une demande d'intervention. Vous souhaitez un
+    devis ? Nous le réalisons gratuitement</p7>
+  <br>
+  <br>
+  <ul type="dics">
+
+    <a href="http://127.0.0.1:5500/Jarditou/Mention%20l%C3%A9gales">
+      <li>Mention légales</li>
+    </a>
+    <a href="http://127.0.0.1:5500/Jarditou/Horaires">
+      <li>Horaires</li>
+    </a>
+    <a href="http://127.0.0.1:5500/Jarditou/Plan%20du%20site">
+      <li>Plan du site</li>
+    </a>
+  </ul>
+
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
