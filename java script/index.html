@@ -8,35 +8,20 @@
 <body>
     <h1>Ma page html qui contient un fichier .js</h1><br>
 
-    <h1>qui se trouve trouve dans une balise script en fin de page , avant la fermeture de la balise body.</h1>
+    <h1> Eval javascript </h1>
 
     <script src="javascript.js"></script>
 
     <script>
 
-    var j=0;
-    
-    var a=0;
-    
-    var v=0;
-    
-    var personnes;
-do {
-  personnes = window.prompt("Entrez votre age");
-  if ( personnes <20) {
-    j++;
-    console.log(personnes);
-  }
-  else if ((personnes >=40 ) && (personnes <=100)) {
-    v++;
-    console.log(v);
-  }
-}
-while (personnes < 100);
- 
-window.alert("Il y a " + "" + j + "" + " jeunes\n " + "Il y a " + "" + a + "" + " adulte\n " + " Il y a " + " Il y a " + "" + v + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
+     n = window.prompt("Entrez un nombre pour avoir ça table de multiplication : ");
 
+    for ( i = 1; i <= 10; ++i) {
 
+        document.write(n + " x " + i + " = " + n * i+ "<br>") ;
+    }
+
+            
 
     </script>
 
