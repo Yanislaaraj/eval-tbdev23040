@@ -13,151 +13,41 @@
 
     <script src="javascript.js"></script>
 
+    <script> 
 
-<p>* Ces zones sont obligatoires</p>
+var pu=parseFloat(window.prompt("Entrer le prix unitaire"))
 
-<form methode = "post" id = "formulaire_contact" nom = "formulaire_contact" onsubmit = "return verif();">
+var qtecom=parseFloat(window.prompt("Entrer la quantité"))
 
-<legend> Vos coordonnées </legend>
+var tot=pu*qtecom
 
-<div class = "form-group" >
+var remise=0
 
-<label for = "nom " > Votre nom* : </label>
+var port=2
 
-<input type = "text" id = "nom" nom = "nom" class = "form-control" placeholder = "Votre nom" value = "" required = "">
+var pap=0
 
-<div id = "nom" ></div>
+var calport=0
 
-<br>
+var reduc=0
 
-</div>
+var total=0
 
-<div class="form-group">
+if(qtecom>0){if(tot>=100&&tot<=200){remise=5}else if(tot>200&&tot<500){remise=10}
 
-<label for="prénom">Votre prénom* : </label>
+else if(tot>=500){remise=10 ; port=0}if(port!=0){calport=total*port/100
 
-<input type="text" id="prénom" name="prénom" class="form-control" placeholder="Votre prénom" required="">
+if(calport<6&&port==2){calport=6}}else{calport=0}reduc=tot*remise/100
+total=parseFloat(tot)-parseFloat(reduc)
+pap=parseFloat(total)+parseFloat(calport)
+document.write("remise "+remise+"% soit -"+reduc+"€ soit "+total+"€ et frais de port "+port+"% soit "+calport+"€ Total à payer "+pap+"€")}else{document.write("vous ne pouvez pas saisir "+qtecom+" produit recommencez ya une erreur")}
+    
+    </script>
 
-<div id="prenom"></div><br>
 
-</div>
 
-<p>Sexe* : </p>
 
-<div class="form-check form-check-inline">
-
-<input type="radio" name="sexe" id="fem" class="form-check-input" value="féminin" checked="">
-
-<label for="fem">Fémimin </label>
-
-</div>
-
-<div class="form-check form-check-inline">
-
-<input type="radio" name="sexe" id="masc" class="form-check-input" value="masculin">
-
-<label for="masc">Masculin</label><br>
-
-</div>
-
-<div class="form-group">
-
-<label for="date">Date de naissance* : </label>
-
-<input type="date" id="date" name="date" class="form-control" required="">
-
-<div id="ddate"></div><br>
-
-</div> 
-
-<div class="form-group">
-
-<label for="cp">Code postal : </label>
-
-<input type="text" id="cp" class="form-control" name="cp"><br>
-
-<div id="dcp"></div>
-
-</div>
-
-<div class="form-group">
-
-<label for="adresse">Adresse : </label>
-
-<input type="text" id="adresse" name="adresse" class="form-control" placeholder="Votre adresse postale"><br>
-
-<div id="dadresse"></div>
-</div>
-
-
-<div class="form-group">
-
-<label for="email">Email : </label>
-
-<input type="email" id="email" name="email" class="form-control" placeholder="votre Email" required="">
-
-<div id="email"></div><br>
-
-</div>
-
-<br>
-
-<legend>Votre demande : </legend>
-
-<br>
-
-<div class="form-group">
-
-<label for="Mes commandes"> Sujet* : </label>
-
-<select name="Mes commandes" id="Mes commandes" class="form-control">
-
-<option value="">Choisissez</option>
-
-<option value="Mes commandes">Mes commandes</option>
-
-<option value="question">Question sur un produit</option>
-
-<option value="Réclamation">Réclamation</option>
-
-<option value="Autres">Autres</option>
-
-</select>
-
-<div id="Mes commandes"></div><br>
-
-</div>
-
-<div class="form-group">
-
-<label for="Question">Votre question* : </label>
-
-<textarea name = "Question" id = "Question" class="form-control" rows="2" cols="20" required=""></textarea>
-
-<div id="Question"></div><br>
-</div>
-
-
-<div class="form-group">
-
-<div class="custom-control">
-
-<input type="checkbox" class="custom-control-input" id="cgu" name="cgu" required="">
-
-<label class="custom-control-label" for="cgu">* J'accepte le traitement informatique de ce formulaire.</label>
-
-<div id="cgu"></div><br>
-
-</div>
-
-</div>
-
-<div class="form-group">
-
-<button type="submit" class="btn btn-dark btn-lg">Envoyer</button> <button type="reset" class="btn btn-dark btn-lg">Annuler</button>
-
-</div>
-
+    
 </form>
 
 </body>
